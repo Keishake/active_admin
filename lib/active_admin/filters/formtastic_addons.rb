@@ -33,12 +33,13 @@ module ActiveAdmin
 
       # The resource class, unwrapped from Ransack
       def klass
-        @object.object.klass
+        @object.klass
       end
 
       def polymorphic_foreign_type?(method)
-        klass.reflections.values.select{ |r| r.macro == :belongs_to && r.options[:polymorphic] }
-          .map(&:foreign_type).include? method.to_s
+       # klass.reflections.values.select{ |r| r.macro == :belongs_to && r.options[:polymorphic] }
+       #   .map(&:foreign_type).include? method.to_s
+        false
       end
 
       def searchable_through_association?(method = method)
