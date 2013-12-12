@@ -4,7 +4,7 @@ module ActiveAdmin
     # This form builder defines methods to build filter forms such
     # as the one found in the sidebar of the index page of a standard resource.
     class FormBuilder < ::ActiveAdmin::FormBuilder
-    #  include ::ActiveAdmin::Filters::FormtasticAddons
+      include ::ActiveAdmin::Filters::FormtasticAddons
 
       def initialize(*args)
         @use_form_buffer = true # force ActiveAdmin::FormBuilder to use the form buffer

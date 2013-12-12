@@ -66,7 +66,8 @@ module ActiveAdmin
 
       # Ransack lets you define custom search methods, so we need to check for them.
       def ransacker?
-        klass._ransackers.key? method.to_s
+       # klass._ransackers.key? method.to_s
+        false
       end
 
     end
